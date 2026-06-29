@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Port extends Model
 {
-    //
+    protected $fillable = ['country_id', 'name', 'latitude', 'longitude'];
+
+    public function country() { return $table->belongsTo(Country::class); }
 }
